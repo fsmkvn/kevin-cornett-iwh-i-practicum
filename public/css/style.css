@@ -56,3 +56,110 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+
+.navigation {
+    margin: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
+    box-shadow: 3px 2px 6px lightgrey;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.no-data {
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px dashed #ccc;
+    border-radius: 15px;
+}
+
+.no-data a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card__property {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.card__created {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 1rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
