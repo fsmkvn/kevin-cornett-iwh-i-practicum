@@ -29,4 +29,4 @@ ___
 
 
 ## Links
-- [New Cusstom Object](https://app-na2.hubspot.com/contacts/244220758/objects/2-175311562/views/all/list)
+- [New Custom Object](https://app-na2.hubspot.com/contacts/244220758/objects/2-175311562/views/all/list)
