@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // * Please DO NOT INCLUDE the private app access token in your repo. Don't do this practicum in your normal account.
-const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
+const AUTH_TOKEN = process.env.AUTH_TOKEN;
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
@@ -17,7 +17,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 app.get("/", async (req, res) => {
   const customObjects = "https://api.hubspot.com/crm/v3/objects/2-175311562?properties=name,custom_property_2,custom_property_3"; // Replace with your custom object ID
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${AUTH_TOKEN}`,
     "Content-Type": "application/json",
   };
   // Log request details for debugging
@@ -57,7 +57,7 @@ app.post("/update-cobj", async (req, res) => {
   const createCustomObject =
     "https://api.hubspot.com/crm/v3/objects/2-175311562"; // Replace with your custom object ID
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${AUTH_TOKEN}`,
     "Content-Type": "application/json",
   };
 
@@ -77,7 +77,7 @@ app.post("/update-cobj", async (req, res) => {
 app.get('/contacts', async (req, res) => {
     const contacts = 'https://api.hubspot.com/crm/v3/objects/contacts';
     const headers = {
-        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${AUTH_TOKEN}`,
         'Content-Type': 'application/json'
     }
     try {
@@ -100,7 +100,7 @@ app.post('/update', async (req, res) => {
     const email = req.query.email;
     const updateContact = `https://api.hubapi.com/crm/v3/objects/contacts/${email}?idProperty=email`;
     const headers = {
-        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        Authorization: `Bearer ${AUTH_TOKEN}`,
         'Content-Type': 'application/json'
     };
 
