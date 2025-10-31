@@ -15,17 +15,21 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 // * Code for Route 1 goes here
 app.get("/", async (req, res) => {
-  const customObjects = "https://api.hubspot.com/crm/v3/objects/2-26650763"; // Replace with your custom object ID
+  const customObjects = "https://api.hubspot.com/crm/v3/objects/2-175311562?properties=name,custom_property_2,custom_property_3"; // Replace with your custom object ID
   const headers = {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
+  // Log request details for debugging
+  console.log('Request URL:', customObjects);
+  console.log('Request headers:', headers);
   try {
     const resp = await axios.get(customObjects, { headers });
     const data = resp.data.results;
+    console.log('Response data:', data); // Log response data for debugging
     res.render("homepage", { title: "Homepage | Custom Objects", data });
   } catch (error) {
-    console.error(error);
+    console.error('Axios error:', error.response ? error.response.data : error.message);
     res.render("homepage", { title: "Homepage | Custom Objects", data: [] });
   }
 });
@@ -41,6 +45,7 @@ app.get("/update-cobj", (req, res) => {
 
 // * Code for Route 3 goes here
 app.post("/update-cobj", async (req, res) => {
+  console.log(req.body);
   const newCustomObject = {
     properties: {
       name: req.body.name,
@@ -61,7 +66,7 @@ app.post("/update-cobj", async (req, res) => {
     res.redirect("/");
   } catch (err) {
     console.error(err);
-    res.redirect("/update-cobj");
+    // res.redirect("/update-cobj");
   }
 });
 

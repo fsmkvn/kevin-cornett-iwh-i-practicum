@@ -20,7 +20,7 @@ html
                 tbody
                     each item in data
                         tr
-                            td #{item.properties.custom_property_1 || 'Not set'}
+                            td #{item.properties.name || 'Not set'}
                             td #{item.properties.custom_property_2 || 'Not set'}
                             td #{item.properties.custom_property_3 || 'Not set'}
         else
