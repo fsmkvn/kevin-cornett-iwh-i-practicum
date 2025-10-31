@@ -6,7 +6,7 @@ body, * {
     padding: 0;
 }
 
-h1 {
+h1, p {
     margin: 1rem;
 }
 
@@ -143,6 +143,7 @@ input[type="submit"] {
 }
 
 table {
+    display: block;
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 1rem;
