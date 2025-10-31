@@ -1,0 +1,29 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1= title
+        
+        p
+            a(href="/update-cobj") Add to this table
+        
+        if data && data.length > 0
+            table
+                thead
+                    tr
+                        th Name
+                        th Custom Property 2
+                        th Custom Property 3
+                tbody
+                    each item in data
+                        tr
+                            td #{item.properties.name || 'Not set'}
+                            td #{item.properties.custom_property_2 || 'Not set'}
+                            td #{item.properties.custom_property_3 || 'Not set'}
+        else
+            p No custom objects found. 
+            p
+                a(href="/update-cobj") Create your first custom object

@@ -1,0 +1,28 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1= title
+        
+        p
+            a(href="/") Return to the homepage
+        
+        .form-container
+            form(action="/update-cobj" method="POST")
+                .form-group
+                    label(for="customProperty1") Name:
+                    input(type="text" id="customProperty1" name="name" required)
+                
+                .form-group
+                    label(for="customProperty2") Custom Property 2:
+                    input(type="text" id="customProperty2" name="customProperty2" required)
+                
+                .form-group
+                    label(for="customProperty3") Custom Property 3:
+                    input(type="text" id="customProperty3" name="customProperty3" required)
+                
+                .form-group
+                    button(type="submit") Create Custom Object

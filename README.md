@@ -4,7 +4,7 @@ This repository is for the Integrating With HubSpot I: Foundations course. This 
 
 To read the full directions, please go to the [practicum instructions](https://app.hubspot.com/academy/l/tracks/1092124/1093824/5493?language=en).
 
-**Put your HubSpot developer test account custom objects URL link here:** https://app.hubspot.com/contacts/l/objects/${custom-obj-number}/views/all/list
+**Put your HubSpot developer test account custom objects URL link here:** <a href="https://app.hubspot.com/contacts/244220758/objects/2-175311562/views/all/list" target="_blank" rel="noopener noreferrer">https://app.hubspot.com/contacts/244220758/objects/2-175311562/views/all/list</a>
 
 ___
 ## Tips:
@@ -27,5 +27,3 @@ ___
 - You must have at least two new routes in your index.js file and one new pug template for the homepage.
 - You must create a developer test account and link to it in your README.md file. Submissions that do not meet this requirement will not be considered.
 
-## Link to Custom Object List View
-- [Custom Object List View](https://app-na2.hubspot.com/contacts/244220758/objects/2-175311562/views/all/list)
